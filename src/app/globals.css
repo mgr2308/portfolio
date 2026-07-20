@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Inter:wght@200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@layer base {
+  :root {
+    --background: #F7F4EF;
+    --foreground: #333333;
+    --card: #FFFFFF;
+    --card-foreground: #333333;
+    --muted: #6F6F6F;
+    --muted-foreground: #6F6F6F;
+    --accent: #8A6B56;
+    --accent-hover: #B89B82;
+    --border: #DDD2C2;
+    --olive: #81806A;
+    --chocolate: #4B392F;
+  }
+
+  * {
+    @apply border-[#DDD2C2];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-graphite font-sans antialiased;
+    font-feature-settings: "kern", "liga";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(138, 107, 86, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(129, 128, 106, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(221, 210, 194, 0.2) 0%, transparent 50%);
+  }
+
+  h1, h2, h3 {
+    @apply font-serif tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-graphite;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-24;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-effect {
+    @apply bg-white/40 backdrop-blur-xl border border-white/60;
+  }
+
+  .editorial-card {
+    @apply bg-white border border-sand/60 rounded-sm overflow-hidden;
+    box-shadow: 0 1px 3px rgba(75, 57, 47, 0.04), 0 4px 12px rgba(75, 57, 47, 0.03);
+  }
+
+  .scrapbook-frame {
+    @apply relative;
+  }
+
+  .scrapbook-frame::before {
+    content: '';
+    @apply absolute inset-0 border border-sand/40 rounded-sm pointer-events-none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+
+  .polaroid {
+    @apply bg-white p-3 pb-8 shadow-md;
+    transform: rotate(-1deg);
+  }
+
+  .polaroid:nth-child(even) {
+    transform: rotate(1deg);
+  }
+
+  .divider {
+    @apply w-12 h-px bg-accent/30 my-8;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium tracking-wider uppercase;
+    @apply bg-sand/30 text-graphite rounded-sm;
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    @apply text-muted-gray;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .font-editorial {
+    font-family: 'Instrument Serif', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
