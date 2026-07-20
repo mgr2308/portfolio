@@ -59,47 +59,12 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative flex justify-center"
           >
-            <div className="relative w-[400px] h-[500px]" style={{ transform: 'rotate(-7.35deg)' }}>
+            <div className="w-[400px] h-[500px] overflow-hidden" style={{ transform: 'rotate(-7.35deg)' }}>
               <img
                 src="/images/hero-photo.jpg"
                 alt="Мария Гусева"
                 className="w-full h-full object-cover"
               />
-
-              <div
-                className="absolute font-display font-bold text-graphite"
-                style={{ left: '38%', top: '32.6%', fontSize: '40px', lineHeight: '96px' }}
-              >
-                WHO IS SHE?
-              </div>
-
-              <div
-                className="absolute font-display font-bold text-graphite"
-                style={{ left: '25.6%', top: '63.4%', fontSize: '24px', lineHeight: '96px' }}
-              >
-                POSITION:
-              </div>
-
-              <div
-                className="absolute font-display font-bold text-graphite"
-                style={{ left: '25.6%', top: '69.7%', fontSize: '24px', lineHeight: '96px' }}
-              >
-                I BELIEVE IN:
-              </div>
-
-              <div
-                className="absolute font-sans text-muted-gray"
-                style={{ left: '38.8%', top: '68.4%', fontSize: '20px', lineHeight: '28px' }}
-              >
-                SMM
-              </div>
-
-              <div
-                className="absolute font-sans text-muted-gray italic"
-                style={{ left: '42%', top: '70.8%', fontSize: '19px', lineHeight: '28px' }}
-              >
-                creating with intention
-              </div>
             </div>
           </motion.div>
         </div>
