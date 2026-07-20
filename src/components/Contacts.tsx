@@ -182,7 +182,7 @@ export function Contacts() {
                   Скачайте мое резюме в PDF, чтобы сохранить или отправить рекрутеру.
                 </p>
                 <Button variant="outline" size="sm" asChild className="border-chocolate text-chocolate hover:bg-chocolate hover:text-white">
-                  <a href="/resume.pdf" download>
+                  <a href="/portfolio/resume.pdf" download>
                     Скачать резюме (PDF)
                   </a>
                 </Button>

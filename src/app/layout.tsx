@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Мария Гусева",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/portfolio/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Мария Гусева — SMM & Content Manager",
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/portfolio/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#F7F4EF" />
       </head>
