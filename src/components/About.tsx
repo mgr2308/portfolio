@@ -37,7 +37,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <ScrollReveal direction="right">
             <div className="relative">
-              <div className="polaroid max-w-sm mx-auto lg:max-w-none">
+              <div className="polaroid max-w-sm mx-auto lg:max-w-none rotate-[-4deg]">
                 <div className="aspect-[3/4] bg-sand/40 overflow-hidden">
                   <img
                     src="/images/about-photo-2.jpg"

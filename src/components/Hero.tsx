@@ -15,7 +15,7 @@ export function Hero() {
       </div>
 
       <div className="section-container w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export function Hero() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold text-graphite leading-[0.95] mb-6">
               Мария
               <br />
-              <span className="italic font-light">Гусева</span>
+              Гусева
             </h1>
             
             <p className="text-accent font-sans text-sm tracking-[0.25em] uppercase mb-8 font-medium">
@@ -61,21 +61,36 @@ export function Hero() {
             className="relative"
           >
             <div className="relative max-w-md mx-auto lg:max-w-none">
-              <div className="polaroid">
-                <div className="aspect-[3/4] bg-sand/30 overflow-hidden">
-                  <img
-                    src="/images/hero-photo.jpg"
-                    alt="Мария Гусева"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="aspect-[3/4] overflow-hidden">
+                <img
+                  src="/images/hero-photo.jpg"
+                  alt="Мария Гусева"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              
+
               <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-white/40" />
               <div className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full bg-olive/10 backdrop-blur-sm border border-white/40" />
-              
-              <div className="absolute top-4 -left-2 text-xs text-muted-gray/60 font-medium tracking-wider uppercase rotate-[-90deg] origin-left">
-                Est. 2022
+
+              <div className="absolute top-4 -left-6 text-xs text-muted-gray font-medium tracking-wider uppercase rotate-[-90deg] origin-left">
+                SMM
+              </div>
+
+              <div className="absolute bottom-20 -right-10 text-2xl font-display font-bold text-graphite/80">
+                WHO IS SHE?
+              </div>
+
+              <div className="absolute top-12 -right-14 text-right">
+                <div className="text-xs font-display font-bold text-graphite/70 tracking-wider mb-1">
+                  POSITION:
+                </div>
+                <div className="text-xs font-display font-bold text-graphite/70 tracking-wider">
+                  I BELIEVE IN:
+                </div>
+              </div>
+
+              <div className="absolute -bottom-4 -left-10 text-sm text-muted-gray italic tracking-wide max-w-[200px]">
+                creating with intention
               </div>
             </div>
           </motion.div>
