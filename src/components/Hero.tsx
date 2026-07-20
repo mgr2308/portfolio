@@ -24,7 +24,7 @@ export function Hero() {
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-accent/40" />
               <span className="text-xs text-accent tracking-[0.3em] uppercase font-medium">
-                Портфолио 2026
+                Портфолио
               </span>
             </div>
             
@@ -39,8 +39,9 @@ export function Hero() {
             </p>
             
             <p className="text-muted-gray text-base md:text-lg leading-relaxed max-w-lg mb-10 text-balance">
-              Создаю контент, который не просто красиво выглядит, а помогает
-              брендам расти, собирать лояльное сообщество и получать клиентов.
+              моя задача: создавать уникальный голос бренда в социальных
+              медиа, а также контент, который помогает брендам расти,
+              собирать лояльное сообщество и получать клиентов.
             </p>
             
             <div className="flex flex-wrap gap-4">

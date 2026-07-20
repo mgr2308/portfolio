@@ -45,8 +45,8 @@ export function WhyMe() {
               whileHover={{ x: 4 }}
               className="flex items-start gap-4 p-5 bg-white rounded-sm border border-sand/40 transition-all duration-300 hover:shadow-md hover:shadow-accent/5"
             >
-              <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <Check size={14} className="text-accent" strokeWidth={2.5} />
+              <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Check size={14} className="text-white" strokeWidth={2.5} />
               </div>
               <p className="text-graphite text-sm md:text-base leading-relaxed">
                 {reason}

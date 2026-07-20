@@ -38,8 +38,8 @@ export function Contacts() {
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 p-6 editorial-card hover:border-accent/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Send size={20} className="text-accent" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                  <Send size={20} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-graphite">Telegram</div>
@@ -54,8 +54,8 @@ export function Contacts() {
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 p-6 editorial-card hover:border-accent/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Instagram size={20} className="text-accent" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                  <Instagram size={20} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-graphite">Instagram</div>
@@ -68,8 +68,8 @@ export function Contacts() {
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 p-6 editorial-card hover:border-accent/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Mail size={20} className="text-accent" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                  <Mail size={20} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-graphite">Email</div>

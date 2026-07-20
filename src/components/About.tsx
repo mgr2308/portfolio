@@ -7,16 +7,15 @@ import { Check, Paperclip } from "lucide-react"
 const achievements = [
   { value: "4+", label: "лет опыта" },
   { value: "300+", label: "блогеров" },
-  { value: "1,5 млн", label: "просмотров" },
-  { value: "50+", label: "съемок" },
+  { value: "10+", label: "сфер работы" },
+  { value: "100+", label: "съемок" },
 ]
 
 const stats = [
-  "более 300 интеграций с блогерами",
-  "Reels с охватом более 1,5 млн просмотров",
-  "участие в федеральных рекламных кампаниях",
-  "организация съемок и фестивалей",
-  "развитие брендов от локального бизнеса до федеральных сетей",
+  "создадите сильную визуальную идентичность бренда",
+  "превратите социальные сети в инструмент привлечения клиентов",
+  "повысите узнаваемость и доверие аудитории",
+  "сэкономите время, передав SMM в надежные руки",
 ]
 
 const skills = [
@@ -62,12 +61,14 @@ export function About() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-graphite mb-8 leading-[1.1]">
                 Привет!
                 <br />
-                <span className="italic font-light text-accent">Меня зовут Мария.</span>
+                Меня зовут
+                <br />
+                Мария.
               </h2>
               
               <p className="text-muted-gray leading-relaxed mb-8 text-lg">
                 Я SMM и контент-менеджер с опытом более 4 лет.
-                Работала с ресторанами, beauty-проектами и локальными брендами.
+                Моя главная сила: уникальный подход к каждому проекту.
               </p>
 
               <p className="text-graphite text-sm tracking-[0.15em] uppercase font-medium mb-4">
@@ -91,7 +92,7 @@ export function About() {
               </div>
 
               <p className="text-graphite text-sm tracking-[0.15em] uppercase font-medium mb-4">
-                За время работы:
+                СО МНОЙ ВЫ:
               </p>
 
               <ul className="space-y-3 mb-0">
