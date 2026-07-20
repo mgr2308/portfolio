@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowDown, Paperclip } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -62,11 +62,12 @@ export function Hero() {
           >
             <div className="relative max-w-md mx-auto lg:max-w-none">
               <div className="polaroid">
-                <div className="aspect-[3/4] bg-sand/30 flex items-center justify-center text-accent/40 font-serif text-lg overflow-hidden">
-                  <div className="text-center">
-                    <Paperclip className="mx-auto mb-2 opacity-30" size={24} />
-                    <span className="text-sm">Ваше фото</span>
-                  </div>
+                <div className="aspect-[3/4] bg-sand/30 overflow-hidden">
+                  <img
+                    src="/images/hero-photo.jpg"
+                    alt="Мария Гусева"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               

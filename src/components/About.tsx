@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ScrollReveal } from "@/components/ScrollReveal"
-import { Check, Paperclip } from "lucide-react"
+import { Check } from "lucide-react"
 
 const achievements = [
   { value: "4+", label: "лет опыта" },
@@ -38,14 +38,22 @@ export function About() {
           <ScrollReveal direction="right">
             <div className="relative">
               <div className="polaroid max-w-sm mx-auto lg:max-w-none">
-                <div className="aspect-[3/4] bg-sand/40 flex items-center justify-center text-accent/40 font-serif text-lg overflow-hidden">
-                  <div className="text-center">
-                    <Paperclip className="mx-auto mb-2 opacity-30" size={24} />
-                    <span className="text-sm">Ваше фото</span>
-                  </div>
+                <div className="aspect-[3/4] bg-sand/40 overflow-hidden">
+                  <img
+                    src="/images/about-photo-2.jpg"
+                    alt="Мария Гусева"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full bg-accent/5 blur-2xl -z-10" />
+              <div className="absolute -top-4 -left-4 w-28 h-36 shadow-lg border-2 border-white -rotate-6 overflow-hidden -z-5 hidden md:block">
+                <img
+                  src="/images/about-photo-1.jpg"
+                  alt=""
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </ScrollReveal>
 
