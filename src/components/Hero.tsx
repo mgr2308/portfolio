@@ -61,35 +61,32 @@ export function Hero() {
             className="relative"
           >
             <div className="relative max-w-md mx-auto lg:max-w-none">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden" style={{ transform: 'rotate(-7.35deg)' }}>
                 <img
                   src="/images/hero-photo.jpg"
                   alt="Мария Гусева"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-110"
                 />
               </div>
 
-              <div className="absolute -top-6 -right-6 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-white/40" />
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 rounded-full bg-olive/10 backdrop-blur-sm border border-white/40" />
-
-              <div className="absolute top-4 -left-6 text-xs text-muted-gray font-medium tracking-wider uppercase rotate-[-90deg] origin-left">
+              <div className="absolute top-[3%] -left-6 text-xs text-muted-gray font-medium tracking-wider uppercase rotate-[-90deg] origin-top-left">
                 SMM
               </div>
 
-              <div className="absolute bottom-20 -right-10 text-2xl font-display font-bold text-graphite/80">
-                WHO IS SHE?
-              </div>
-
-              <div className="absolute top-12 -right-14 text-right">
-                <div className="text-xs font-display font-bold text-graphite/70 tracking-wider mb-1">
+              <div className="absolute top-[12%] -right-8 text-right">
+                <div className="text-xs font-display font-bold text-graphite tracking-wider mb-1">
                   POSITION:
                 </div>
-                <div className="text-xs font-display font-bold text-graphite/70 tracking-wider">
+                <div className="text-xs font-display font-bold text-graphite tracking-wider">
                   I BELIEVE IN:
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -left-10 text-sm text-muted-gray italic tracking-wide max-w-[200px]">
+              <div className="absolute bottom-[18%] -right-6 text-2xl md:text-3xl font-display font-bold text-graphite">
+                WHO IS SHE?
+              </div>
+
+              <div className="absolute bottom-[2%] -left-8 text-sm text-muted-gray italic tracking-wide max-w-[160px] leading-tight">
                 creating with intention
               </div>
             </div>
