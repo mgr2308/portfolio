@@ -9,12 +9,11 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-sand/20 blur-3xl" />
-        <div className="absolute bottom-40 right-16 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-olive/10 blur-3xl" />
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-sand/30" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-sand/20" />
       </div>
 
-      <div className="section-container w-full">
+      <div className="section-container w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -31,7 +30,7 @@ export function Hero() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-semibold text-graphite leading-[0.95] mb-6">
               Мария
               <br />
-              Гусева
+              <span className="italic font-light">Гусева</span>
             </h1>
             
             <p className="text-accent font-sans text-sm tracking-[0.25em] uppercase mb-8 font-medium">
@@ -60,42 +59,46 @@ export function Hero() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative flex justify-center"
           >
-            <div className="relative" style={{ transform: 'rotate(-7.35deg)' }}>
-              {/* Badge clip */}
-              <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-16 h-16">
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="20" y="0" width="24" height="40" rx="2" fill="#E5E5E5" stroke="#999" strokeWidth="1"/>
-                  <circle cx="32" cy="32" r="4" fill="#666"/>
-                  <rect x="28" y="40" width="8" height="4" fill="#999"/>
-                </svg>
+            <div className="relative w-[400px] h-[500px]" style={{ transform: 'rotate(-7.35deg)' }}>
+              <img
+                src="/images/hero-photo.jpg"
+                alt="Мария Гусева"
+                className="w-full h-full object-cover"
+              />
+
+              <div
+                className="absolute font-display font-bold text-graphite"
+                style={{ left: '38%', top: '32.6%', fontSize: '40px', lineHeight: '96px' }}
+              >
+                WHO IS SHE?
               </div>
 
-              {/* Badge card */}
-              <div className="w-80 bg-white rounded-lg shadow-2xl border border-gray-200 p-8 pt-12">
-                <div className="text-center">
-                  <h2 className="text-3xl font-display font-bold text-graphite mb-6">
-                    WHO IS SHE?
-                  </h2>
-                  
-                  <div className="w-48 h-60 mx-auto mb-6 overflow-hidden rotate-[-5deg] shadow-lg">
-                    <img
-                      src="/images/hero-photo.jpg"
-                      alt="Мария Гусева"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+              <div
+                className="absolute font-display font-bold text-graphite"
+                style={{ left: '25.6%', top: '63.4%', fontSize: '24px', lineHeight: '96px' }}
+              >
+                POSITION:
+              </div>
 
-                  <div className="text-left space-y-2">
-                    <div className="text-sm">
-                      <span className="font-display font-bold text-graphite">POSITION:</span>
-                      <span className="text-muted-gray ml-2">SMM</span>
-                    </div>
-                    <div className="text-sm">
-                      <span className="font-display font-bold text-graphite">I BELIEVE IN:</span>
-                      <span className="text-muted-gray ml-2">creating with intention</span>
-                    </div>
-                  </div>
-                </div>
+              <div
+                className="absolute font-display font-bold text-graphite"
+                style={{ left: '25.6%', top: '69.7%', fontSize: '24px', lineHeight: '96px' }}
+              >
+                I BELIEVE IN:
+              </div>
+
+              <div
+                className="absolute font-sans text-muted-gray"
+                style={{ left: '38.8%', top: '68.4%', fontSize: '20px', lineHeight: '28px' }}
+              >
+                SMM
+              </div>
+
+              <div
+                className="absolute font-sans text-muted-gray italic"
+                style={{ left: '42%', top: '70.8%', fontSize: '19px', lineHeight: '28px' }}
+              >
+                creating with intention
               </div>
             </div>
           </motion.div>
