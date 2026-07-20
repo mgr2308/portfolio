@@ -15,7 +15,7 @@ export function Hero() {
       </div>
 
       <div className="section-container w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,36 +58,44 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="relative"
+            className="relative flex justify-center"
           >
-            <div className="relative max-w-md mx-auto lg:max-w-none">
-              <div className="aspect-[3/4] overflow-hidden" style={{ transform: 'rotate(-7.35deg)' }}>
-                <img
-                  src="/images/hero-photo.jpg"
-                  alt="Мария Гусева"
-                  className="w-full h-full object-cover scale-110"
-                />
+            <div className="relative" style={{ transform: 'rotate(-7.35deg)' }}>
+              {/* Badge clip */}
+              <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-16 h-16">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="20" y="0" width="24" height="40" rx="2" fill="#E5E5E5" stroke="#999" strokeWidth="1"/>
+                  <circle cx="32" cy="32" r="4" fill="#666"/>
+                  <rect x="28" y="40" width="8" height="4" fill="#999"/>
+                </svg>
               </div>
 
-              <div className="absolute top-[3%] -left-6 text-xs text-muted-gray font-medium tracking-wider uppercase rotate-[-90deg] origin-top-left">
-                SMM
-              </div>
+              {/* Badge card */}
+              <div className="w-80 bg-white rounded-lg shadow-2xl border border-gray-200 p-8 pt-12">
+                <div className="text-center">
+                  <h2 className="text-3xl font-display font-bold text-graphite mb-6">
+                    WHO IS SHE?
+                  </h2>
+                  
+                  <div className="w-48 h-60 mx-auto mb-6 overflow-hidden rotate-[-5deg] shadow-lg">
+                    <img
+                      src="/images/hero-photo.jpg"
+                      alt="Мария Гусева"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-              <div className="absolute top-[12%] -right-8 text-right">
-                <div className="text-xs font-display font-bold text-graphite tracking-wider mb-1">
-                  POSITION:
+                  <div className="text-left space-y-2">
+                    <div className="text-sm">
+                      <span className="font-display font-bold text-graphite">POSITION:</span>
+                      <span className="text-muted-gray ml-2">SMM</span>
+                    </div>
+                    <div className="text-sm">
+                      <span className="font-display font-bold text-graphite">I BELIEVE IN:</span>
+                      <span className="text-muted-gray ml-2">creating with intention</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs font-display font-bold text-graphite tracking-wider">
-                  I BELIEVE IN:
-                </div>
-              </div>
-
-              <div className="absolute bottom-[18%] -right-6 text-2xl md:text-3xl font-display font-bold text-graphite">
-                WHO IS SHE?
-              </div>
-
-              <div className="absolute bottom-[2%] -left-8 text-sm text-muted-gray italic tracking-wide max-w-[160px] leading-tight">
-                creating with intention
               </div>
             </div>
           </motion.div>
