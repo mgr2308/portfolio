@@ -48,7 +48,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#F7F4EF" />
+        <meta name="theme-color" content="#f7f4ed" />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />

@@ -4,14 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap text-sm font-medium rounded-sm transition-colors duration-150 ease-standard focus-visible:outline-none focus-visible:shadow-focus focus-visible:ring-2 focus-visible:ring-ring-blue active:opacity-80 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-chocolate text-white hover:bg-accent hover:scale-[1.03]",
-        outline: "border border-chocolate text-chocolate hover:bg-chocolate hover:text-white hover:scale-[1.03]",
-        ghost: "text-graphite hover:bg-accent/10 hover:text-accent",
-        link: "text-accent underline-offset-4 hover:underline",
+        default: "bg-charcoal text-off-white shadow-inset",
+        outline: "border border-border-light text-charcoal hover:border-charcoal-40 duration-250",
+        surface: "bg-charcoal-04 text-charcoal hover:bg-charcoal-10",
+        ghost: "text-charcoal hover:bg-charcoal-04",
+        pill: "rounded-pill bg-charcoal-04 text-charcoal hover:bg-charcoal-10",
+        link: "text-charcoal underline underline-offset-[3px] h-auto p-0",
       },
       size: {
         default: "h-11 px-6 py-2.5",

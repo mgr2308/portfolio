@@ -9,51 +9,49 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#F7F4EF",
-        sand: "#DDD2C2",
-        accent: "#8A6B56",
-        "accent-hover": "#B89B82",
-        graphite: "#333333",
-        chocolate: "#4B392F",
-        olive: "#81806A",
-        "muted-gray": "#6F6F6F",
+        cream: "#f7f4ed",
+        charcoal: "#1c1c1c",
+        "off-white": "#fcfbf8",
+        "muted-gray": "#5f5f5d",
+        "border-light": "#eceae4",
+        "charcoal-83": "rgba(28,28,28,.83)",
+        "charcoal-82": "rgba(28,28,28,.82)",
+        "charcoal-40": "rgba(28,28,28,.4)",
+        "charcoal-10": "rgba(28,28,28,.1)",
+        "charcoal-04": "rgba(28,28,28,.04)",
+        "charcoal-03": "rgba(28,28,28,.03)",
+        "ring-blue": "rgba(59,130,246,.5)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        border: "var(--border-passive)",
+        muted: "var(--text-muted)",
       },
       fontFamily: {
-        serif: ["Cormorant Garamond", "Instrument Serif", "Georgia", "serif"],
-        sans: ["Manrope", "Inter", "system-ui", "sans-serif"],
+        sans: ["Figtree", "ui-sans-serif", "system-ui", "sans-serif"],
       },
-      animation: {
-        "fade-up": "fadeUp 0.8s ease-out",
-        "fade-in": "fadeIn 0.6s ease-out",
-        "scale-in": "scaleIn 0.5s ease-out",
-        "slide-left": "slideLeft 0.6s ease-out",
-        "slide-right": "slideRight 0.6s ease-out",
+      borderRadius: {
+        micro: "4px",
+        sm: "6px",
+        md: "8px",
+        card: "12px",
+        container: "16px",
+        pill: "9999px",
       },
-      keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        scaleIn: {
-          "0%": { opacity: "0", transform: "scale(0.95)" },
-          "100%": { opacity: "1", transform: "scale(1)" },
-        },
-        slideLeft: {
-          "0%": { opacity: "0", transform: "translateX(40px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        slideRight: {
-          "0%": { opacity: "0", transform: "translateX(-40px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
+      boxShadow: {
+        inset: "rgba(255,255,255,.2) 0 .5px 0 0 inset, rgba(0,0,0,.2) 0 0 0 .5px inset, rgba(0,0,0,.05) 0 1px 2px 0",
+        focus: "rgba(0,0,0,.1) 0 4px 12px",
+      },
+      transitionDuration: {
+        "150": "150ms",
+        "250": "250ms",
+        "400": "400ms",
+      },
+      transitionTimingFunction: {
+        standard: "cubic-bezier(.4,0,.2,1)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }
 
 export default config
