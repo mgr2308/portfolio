@@ -44,16 +44,19 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-cream/90 backdrop-blur-xl border-b border-sand/40 py-3"
+          ? "bg-cream border-b border-border-light py-3"
           : "bg-transparent py-5"
       )}
     >
       <div className="section-container flex items-center justify-between">
         <Link
           href="/"
-          className="text-graphite font-display text-xl md:text-2xl font-semibold hover:text-accent transition-colors duration-300"
+          className="flex items-baseline gap-2 text-charcoal font-sans text-xl md:text-2xl font-semibold tracking-[-0.8px]"
         >
           Мария Гусева
+          <span className="text-sm font-normal tracking-normal text-muted-gray hidden md:inline">
+            SMM & Content Manager
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -61,19 +64,19 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-gray hover:text-graphite transition-colors duration-300 relative group"
+              className="text-sm text-muted-gray hover:text-charcoal transition-colors duration-150 relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-charcoal transition-all duration-250 ease-standard group-hover:w-full" />
             </Link>
           ))}
-          <Button size="sm" asChild className="bg-chocolate hover:bg-accent">
+          <Button size="sm" asChild>
             <Link href="#contacts">Связаться</Link>
           </Button>
         </nav>
 
         <button
-          className="lg:hidden p-2 text-graphite hover:text-accent transition-colors"
+          className="lg:hidden p-2 text-charcoal hover:opacity-80 transition-opacity duration-150"
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label="Меню"
         >
@@ -87,8 +90,8 @@ export function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-cream/95 backdrop-blur-xl border-b border-sand/40"
+            transition={{ duration: 0.4 }}
+            className="lg:hidden bg-cream border-b border-border-light"
           >
             <nav className="flex flex-col gap-4 px-6 py-8">
               {navLinks.map((link) => (
@@ -96,14 +99,14 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className="text-lg text-graphite hover:text-accent transition-colors duration-300 py-2"
+                  className="text-lg text-charcoal hover:opacity-80 transition-opacity duration-150 py-2"
                 >
                   {link.label}
                 </Link>
               ))}
               <Button
                 size="lg"
-                className="mt-4 w-full bg-chocolate hover:bg-accent"
+                className="mt-4 w-full"
                 onClick={() => setIsMobileOpen(false)}
                 asChild
               >

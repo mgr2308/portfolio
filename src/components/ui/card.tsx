@@ -8,8 +8,8 @@ function Card({ className, hover = true, ...props }: CardProps) {
   return (
     <div
       className={cn(
-        "bg-white rounded-sm border border-sand/60 overflow-hidden",
-        hover && "transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5",
+        "bg-cream rounded-card border border-border-light overflow-hidden",
+        hover && "transition-colors duration-250 ease-standard hover:border-charcoal-40",
         className
       )}
       {...props}

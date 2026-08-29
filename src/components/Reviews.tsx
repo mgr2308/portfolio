@@ -3,7 +3,6 @@
 import { useState, useRef } from "react"
 import { motion, PanInfo } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
-import { ScrollReveal } from "@/components/ScrollReveal"
 import reviewsData from "@/data/reviews.json"
 import type { ReviewItem } from "@/lib/directus"
 
@@ -30,24 +29,20 @@ export function Reviews({ reviews: reviewsProp }: Props) {
   }
 
   return (
-    <section id="reviews" className="section-padding bg-white relative">
+    <section id="reviews" className="section-padding bg-cream relative">
       <div className="section-container">
-        <ScrollReveal>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-accent/40" />
-            <span className="text-xs text-accent tracking-[0.3em] uppercase font-medium">
-              Отзывы
-            </span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-graphite mb-4 leading-[1.1]">
-            Что говорят клиенты
-          </h2>
-          
-          <p className="text-muted-gray text-lg max-w-xl mb-16">
-            О сотрудничестве со мной
-          </p>
-        </ScrollReveal>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="eyebrow-rule" />
+          <span className="eyebrow-label">Отзывы</span>
+        </div>
+
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-semibold text-charcoal mb-4 leading-[1.1]">
+          Что говорят клиенты
+        </h2>
+
+        <p className="text-muted-gray text-lg max-w-xl mb-16">
+          О сотрудничестве со мной
+        </p>
 
         <div className="relative max-w-2xl mx-auto">
           <div ref={constraintsRef} className="overflow-hidden">
@@ -64,36 +59,36 @@ export function Reviews({ reviews: reviewsProp }: Props) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -60 }}
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-                className="editorial-card p-8 md:p-10 relative"
+                className="bordered-card p-8 md:p-10 relative"
               >
                 <Quote className="absolute top-6 right-6 opacity-10" size={48} strokeWidth={1} />
-                
+
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       size={14}
-                      className="text-accent"
+                      className="text-charcoal"
                       fill="currentColor"
                       strokeWidth={0}
                     />
                   ))}
                 </div>
 
-                <p className="text-graphite text-base md:text-lg leading-relaxed mb-8 font-serif italic">
+                <p className="text-charcoal text-base md:text-lg leading-relaxed mb-8 font-display-alt">
                   &ldquo;{reviews[current].text}&rdquo;
                 </p>
 
-                <div className="flex items-center gap-4 pt-6 border-t border-sand/40">
-                  <div className="w-12 h-12 rounded-full bg-sand/40 flex items-center justify-center text-accent/40 text-xs font-medium overflow-hidden">
+                <div className="flex items-center gap-4 pt-6 border-t border-border-light">
+                  <div className="w-12 h-12 rounded-pill bg-charcoal-04 flex items-center justify-center text-muted-gray text-xs font-medium overflow-hidden">
                     {reviews[current].image ? (
-                      <div className="w-full h-full bg-sand/30" />
+                      <div className="w-full h-full bg-charcoal-04" />
                     ) : (
                       reviews[current].name.charAt(0)
                     )}
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-graphite">
+                    <div className="text-sm font-medium text-charcoal">
                       {reviews[current].name}
                     </div>
                     <div className="text-xs text-muted-gray">
@@ -108,7 +103,7 @@ export function Reviews({ reviews: reviewsProp }: Props) {
           <div className="flex items-center justify-center gap-4 mt-8">
             <button
               onClick={handlePrev}
-              className="w-10 h-10 rounded-full border border-sand/60 flex items-center justify-center text-graphite hover:bg-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-10 h-10 rounded-pill border border-border-light flex items-center justify-center text-charcoal hover:border-charcoal-40 transition-colors duration-250 ease-standard"
               aria-label="Предыдущий отзыв"
             >
               <ChevronLeft size={18} strokeWidth={1.5} />
@@ -119,10 +114,10 @@ export function Reviews({ reviews: reviewsProp }: Props) {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-1 rounded-full transition-all duration-300 ${
+                  className={`h-1 rounded-pill transition-all duration-250 ease-standard ${
                     i === current
-                      ? "bg-accent w-8"
-                      : "bg-sand hover:bg-accent/30 w-4"
+                      ? "bg-charcoal w-8"
+                      : "bg-border-light hover:bg-charcoal-40 w-4"
                   }`}
                   aria-label={`Отзыв ${i + 1}`}
                 />
@@ -131,7 +126,7 @@ export function Reviews({ reviews: reviewsProp }: Props) {
 
             <button
               onClick={handleNext}
-              className="w-10 h-10 rounded-full border border-sand/60 flex items-center justify-center text-graphite hover:bg-accent hover:text-white hover:border-accent transition-all duration-300"
+              className="w-10 h-10 rounded-pill border border-border-light flex items-center justify-center text-charcoal hover:border-charcoal-40 transition-colors duration-250 ease-standard"
               aria-label="Следующий отзыв"
             >
               <ChevronRight size={18} strokeWidth={1.5} />
